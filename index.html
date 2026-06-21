@@ -3,20 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculatrice Simple</title>
+    <title>Calculatrice Aero</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="calculator">
-        <input type="text" id="display" readonly>
-        <div class="buttons">
-            <button onclick="clearDisplay()">C</button>
-            <button onclick="appendValue('%')">%</button>
-            <button onclick="appendValue('/')">/</button>
-            <button onclick="appendValue('*')">*</button>
-            <!-- باقي الأزرار التي كانت موجودة عندك تبقى هنا -->
+
+    <div class="aero-frame">
+        <div class="title-bar">
+            <span class="title-dot"></span>
+            <span class="title-text">Calculatrice</span>
+        </div>
+
+        <div class="calculator">
+            <input type="text" id="display" readonly>
+
+            <div class="buttons">
+                <button class="btn function" onclick="clearDisplay()">C</button>
+                <button class="btn function" onclick="deleteLast()">⌫</button>
+                <button class="btn operator" onclick="appendValue('%')">%</button>
+                <button class="btn operator" onclick="appendValue('/')">÷</button>
+
+                <button class="btn number" onclick="appendValue('7')">7</button>
+                <button class="btn number" onclick="appendValue('8')">8</button>
+                <button class="btn number" onclick="appendValue('9')">9</button>
+                <button class="btn operator" onclick="appendValue('*')">×</button>
+
+                <button class="btn number" onclick="appendValue('4')">4</button>
+                <button class="btn number" onclick="appendValue('5')">5</button>
+                <button class="btn number" onclick="appendValue('6')">6</button>
+                <button class="btn operator" onclick="appendValue('-')">−</button>
+
+                <button class="btn number" onclick="appendValue('1')">1</button>
+                <button class="btn number" onclick="appendValue('2')">2</button>
+                <button class="btn number" onclick="appendValue('3')">3</button>
+                <button class="btn operator" onclick="appendValue('+')">+</button>
+
+                <button class="btn number zero" onclick="appendValue('0')">0</button>
+                <button class="btn number" onclick="appendValue('.')">.</button>
+                <button class="btn equals" onclick="calculate()">=</button>
+            </div>
         </div>
     </div>
+
     <script src="script.js"></script>
 </body>
 </html>
